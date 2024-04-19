@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>202413375 이민석</title>
+    <style>
+        body {
+            display: block;
+            margin:0 auto;
+            min-height: 100vh;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-align: center;
+            line-height: 100vh;
+        }
+        h1 {
+            display: none;
+        }
+        #background_text {
+            display: inline-block;
+            height: 100%;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 100%;
+            vertical-align: middle;
+        }
+        .scrollup {
+            display: inline-block;
+            position: relative;
+            animation: 0.05s ease-in 0s 1 normal forwards running scrollup;
+        }
+        .blur {
+            display: inline-block;
+            animation: 1s ease-out 0s 1 normal forwards running blur;
+        }
+        .emerge {
+            display: inline-block;
+            animation: 1s ease-out 0s 1 reverse forwards running blur;
+        }
+        .focuson {
+            display: inline-block;
+            animation: 1s ease-out 0s 1 normal forwards running focuson;
+        }
+        .focusoff {
+            display: inline-block;
+            animation: 1s ease-out 0s 1 reverse forwards running focuson;
+        }
+        .typing {
+            display: inline-block;
+            width: fit-content;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: 0.5s linear 0s 1 normal forwards running typing, 0.5s linear 0s infinite normal forwards running typingborder;
+        }
+        .shrink {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: 0.5s linear 0s 1 reverse forwards running typing, 0.5s linear 0s infinite normal forwards running typingborder;
+        }
+        .typing_and_shrink {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: 0.5s linear 0s 1 normal forwards running typing, 0.5s linear 0s infinite normal forwards running typingborder, 1.5s linear 1s 1 reverse forwards running typing;
+        }
+        .extrabold {
+            font-size:800px;
+        }
+        @keyframes blur {
+        from {
+            filter: blur(0);
+        }
+        to {
+            filter: blur(50px);
+        }
+        }
+        @keyframes focuson {
+        10%, 20% {
+            filter : blur(10px);
+        }
+        21%, 40% {
+            filter : blur(5px);
+        }
+        41%, 60% {
+            filter : blur(10px);
+        }
+        61%, 90% {
+            filter : blur(5);
+        }
+        61%, 90% {
+            filter : blur(0);
+        }
+        }
+        @keyframes scrollup {
+        from {
+            bottom: -20px;
+        }
+        to {
+            bottom: 0;
+        }
+        }
+        @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width:100%;
+        }
+        }
+        @keyframes typingborder {
+        from {
+            border-right: 5px solid white;
+        }
+        to {
+            border-right: 5px solid black;
+        }
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1 class="typing">안녕하세요, 저는 이민석입니다.</h1> -->
+    <span id="background_text">안녕하세요, 저는 이민석입니다.</span>
+    <script>
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">전자정보통신공학부</span> 이민석입니다.";
+        }, 3000);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">24학번</span> 이민석입니다.";
+        }, 5000);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">전자정보통신공학부</span> 이민석입니다.";
+        }, 5100);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">24학번</span> 이민석입니다.";
+        }, 5150);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">전자정보통신공학부</span> 이민석입니다.";
+        }, 5200);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">24학번</span> 이민석입니다.";
+        }, 5250);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 <span class=\"scrollup\">전자정보통신공학부</span> 이민석입니다.";
+        }, 5300);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class=\"extrabold\">24</span>";
+        }, 5350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.color = "white";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+        }, 6350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="안녕하세요, 저는 전자정보통신공학부 24학번 이민석입니다!";
+        }, 7350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "left";
+            document.getElementById("background_text").innerHTML="문제를";
+        }, 8350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="문제를 해결할 때";
+        }, 9350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="문제를 해결할 때 항상 본질을 찾고자 하는 사람입니다.";
+        }, 10350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="문제를 해결할 때 항상 본질을 찾고자 하는 사람입니다.(이런말 하기는 좀 부끄럽지만)";
+        }, 11350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementById("background_text").innerHTML="<span class='typing_and_shrink'>저는 개발자를 꿈꾸고 있습니다!</span>";
+        }, 12350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='focuson'>프로그래밍의 가장 매력적인 점은 집중하면 답이 보인다는 점!</span>";
+        }, 14850);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='shrink'>프로그래밍의 가장 매력적인 점은 집중하면 답이 보인다는 점!</span>";
+            document.getElementsByTagName("body")[0].style.color = "black";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        }, 15850);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='typing'>그중에서도 opencl프로그래밍에 관심이 많습니다.</span>";
+        }, 16850);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>웹</span>프로그래밍에 관심이 많습니다.";
+        }, 17850);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>리눅스 시스템</span>프로그래밍에 관심이 많습니다.";
+        }, 18850);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>리눅스 시스템</span>에 관심이 많습니다.";
+        }, 18900);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>수학</span>에 관심이 많습니다.";
+        }, 18950);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>물리학</span>에 관심이 많습니다.";
+        }, 19000);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>리눅스 시스템</span>에 관심이 많습니다.";
+        }, 19050);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>수학</span>에 관심이 많습니다.";
+        }, 19100);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>물리학</span>에 관심이 많습니다.";
+        }, 19150);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>리눅스 시스템</span>에 관심이 많습니다.";
+        }, 19200);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>수학</span>에 관심이 많습니다.";
+        }, 19250);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="그중에서도 <span class='scrollup'>물리학</span>에 관심이 많습니다.";
+        }, 19300);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='blur'>그중에서도 물리학에 관심이 많습니다.</span>";
+        }, 19350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='emerge'>혹시 연락할 일이 생긴다면...</span>";
+        }, 20350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="mslee9354@gmail.com";
+        }, 22350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="으로 연락주세요.";
+        }, 23350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="벌써";
+        }, 24350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="벌써.";
+        }, 25350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="벌써..";
+        }, 26350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="벌써...";
+        }, 27350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="<span class='extrabold'>28</span>";
+        }, 28350);
+        setTimeout(()=>{
+            document.getElementById("background_text").innerHTML="벌써 28초나 지났군요.";
+        }, 29350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "right";
+            document.getElementById("background_text").innerHTML="금방 가봐야만 할 것 같습니다.";
+        }, 30850);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementsByTagName("body")[0].style.color = "black";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+            document.getElementById("background_text").innerHTML="그";
+        }, 31350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementsByTagName("body")[0].style.color = "white";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+            document.getElementById("background_text").innerHTML="럼";
+        }, 31850);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementsByTagName("body")[0].style.color = "black";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+            document.getElementById("background_text").innerHTML="이";
+        }, 32350);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementsByTagName("body")[0].style.color = "white";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+            document.getElementById("background_text").innerHTML="만";
+        }, 32850);
+        setTimeout(()=>{
+            document.getElementsByTagName("body")[0].style.textAlign = "center";
+            document.getElementsByTagName("body")[0].style.color = "black";
+            document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+            document.getElementById("background_text").innerHTML=";-)";
+        }, 33350);
+    </script>
+</body>
+</html>
